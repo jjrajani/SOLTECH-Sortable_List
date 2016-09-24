@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLTECH</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="header">
+      <h3>Jenna Rajani</h3>
+      <h3>A sortable List</h3>
+    </div>
+    <div class="container">
+      <div class="people-sort">
+      <label class="label head">List of People</label>
+        <ul id="people">
+        </ul>
+      </div>
+      <form class="sort">
+        <p class="control">
+          <label class="dir">Sort direction:</label>
+          <label class="radio">
+            <input class="dir" type="radio" name="question">
+            ASC
+            <input type="radio" name="question">
+            DSC
+          </label>
+        </p>
+          <p class="control">
+          <label class="label cat">Sort by:</label>
+            <span>
+              <select>
+                <option>Age</option>
+                <option>First Name</option>
+                <option>Last Name</option>
+              </select>
+            </span>
+          </p>
+          <button class="submit">Sort</button>
+      </form>
+    </div>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

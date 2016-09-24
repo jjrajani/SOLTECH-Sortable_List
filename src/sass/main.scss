@@ -1,0 +1,95 @@
+html, body {
+  min-height: 100vh;
+  width: 100vw;
+  .header {
+    width: 100%;
+    border: solid blue 2px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    border: solid black 2px;
+    display: flex;
+    max-width: 860px;
+    .people-sort {
+      border-right: solid black 2px;
+      width: 100%;
+      max-width: 600px;
+      height: 250px;
+      .head {
+        background-color: rgb(23, 142, 176);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 0 2.5%;
+        margin: 0;
+      }
+      #people {
+        margin: 0px 0 10px 0;
+        padding: 0;
+        width: 100%;
+        max-height: 210px;
+        overflow: scroll;
+        .person {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: solid black 1px;
+          &.under-age {
+            background-color: yellow;
+          }
+          &:first-child {
+            border-top: solid black 1px;
+          }
+          p {
+            min-width: 40%;
+            margin: 5px 0;
+          }
+          p:first-child {
+            padding-left: 2.5%;
+          }
+          p:last-child {
+            padding-right: 2.5%;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .sort {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 35%;
+      max-width: 260px;
+      padding: 10px 2.5%;
+      .control {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        label.dir, label.cat {
+          margin: 0 2.5% 0 0;
+          width: 120px;
+          font-weight: 600;
+          color: black;
+        }
+        label.radio {
+          display: flex;
+          flex-wrap: wrap;
+          input {
+            margin: 0 0 0 5px;
+            width: 22px;
+            border: solid green 1px;
+          }
+        }
+      }
+      button {
+        background-color: rgb(23, 142, 176);
+        border: solid 1px rgb(23, 142, 176);
+        border-radius: 2px;
+        color: white;
+      }
+    }
+  }
+}
