@@ -2,15 +2,23 @@ html, body {
   min-height: 100vh;
   width: 100vw;
   .header {
-    width: 100%;
     display: flex;
     flex-wrap: no-wrap;
+    align-items: center;
     border-bottom: solid black 2px;
     padding: 0 5%;
     h3 {
-      width: 50%;
+      width: 40%;
       display: flex;
       justify-content: center;
+    }
+    a {
+      width: 20%;
+      text-align: center;
+      i.fa-github {
+        font-size: 2.3em;
+        color: rgb(200, 25, 100);
+      }
     }
   }
   .container {
