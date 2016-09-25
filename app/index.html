@@ -12,27 +12,23 @@
     <div class="header">
       <h3>A sortable List</h3>
       <a href="https://github.com/jjrajani/SOLTECH-Sortable_List"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <h3>Jenna Rajani</h3>
+      <h3 class="title">Jenna Rajani</h3>
     </div>
     <div class="container">
       <div class="people-sort">
-      <label class="label head">List of People</label>
-        <ul id="people">
-        </ul>
-      </div>
       <form class="sort">
         <p class="control">
-          <label class="dir">Sort direction:</label>
+          <label class="dir-pick">Sort direction:</label>
           <label class="radio">
-            <input class="dir" type="radio" name="question">
+            <input class="dir" type="radio" name="question" checked="true">
             ASC
-            <input type="radio" name="question">
+            <input class="dir" type="radio" name="question">
             DSC
           </label>
         </p>
           <p class="control">
-          <label class="label cat">Sort by:</label>
-            <span>
+          <label class="cat">Sort by:</label>
+            <span class="sort-opts">
               <select>
                 <option>Age</option>
                 <option>First Name</option>
@@ -42,6 +38,10 @@
           </p>
           <button class="submit">Sort</button>
       </form>
+      <label class="label head">List of People</label>
+        <ul id="people">
+        </ul>
+      </div>
     </div>
     <script src="js/bundle.js"></script>
   </body>

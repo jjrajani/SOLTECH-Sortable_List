@@ -1,109 +1,216 @@
+// Colors
+
+$battlship: #656565;
+
 html, body {
   min-height: 100vh;
   width: 100vw;
   .header {
+    max-width: 100%;
     display: flex;
-    flex-wrap: no-wrap;
+    background-color: red;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: solid black 2px;
     padding: 0 5%;
     h3 {
-      width: 40%;
-      display: flex;
-      justify-content: center;
+      color: $battlship;
+      font-weight: 300;
+      color: white;
     }
-    a {
-      width: 20%;
-      text-align: center;
-      i.fa-github {
-        font-size: 2.3em;
-        color: rgb(200, 25, 100);
-      }
+    .fa-github {
+      font-size: 2.5em;
+      color: white;
     }
   }
   .container {
-    width: 80%;
-    margin: 50px auto;
-    border: solid black 2px;
-    display: flex;
-    max-width: 860px;
-    .people-sort {
-      border-right: solid black 2px;
-      width: 100%;
-      max-width: 600px;
-      height: 250px;
-      .head {
-        background-color: rgb(23, 142, 176);
-        height: 40px;
-        display: flex;
-        align-items: center;
-        color: white;
-        padding: 0 2.5%;
-        margin: 0;
-      }
-      #people {
-        margin: 0px 0 10px 0;
-        padding: 0;
-        width: 100%;
-        max-height: 210px;
-        overflow: scroll;
-        .person {
-          display: flex;
-          justify-content: space-between;
-          border-bottom: solid black 1px;
-          &.under-age {
-            background-color: yellow;
-          }
-          &:first-child {
-            border-top: solid black 1px;
-          }
-          p {
-            min-width: 40%;
-            margin: 5px 0;
-          }
-          p:first-child {
-            padding-left: 2.5%;
-          }
-          p:last-child {
-            padding-right: 2.5%;
-            text-align: right;
-          }
-        }
-      }
-    }
+    border: solid 2px $battlship;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 75%;
+    min-width: 396px;
+    margin: 40px auto;
     .sort {
+      background-color: $battlship;
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
-      width: 35%;
-      max-width: 260px;
-      padding: 10px 2.5%;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
       .control {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        label.dir, label.cat {
-          margin: 0 2.5% 0 0;
-          width: 120px;
-          font-weight: 600;
-          color: black;
+        border: solid 1px rgb(11,11,11);
+        margin: 5px 2.5%;
+        padding: 5px 0;
+        background-color: rgb(240, 240, 240);
+        border-radius: 4px;
+        .dir-pick, .cat,
+        .dir, .sort-opts {
+          margin: 0 0 0 2.5%;
         }
-        label.radio {
-          display: flex;
-          flex-wrap: wrap;
-          input {
-            margin: 0 0 0 5px;
-            width: 22px;
-            border: solid green 1px;
-          }
+        &:first-child {
+          margin-top: 15px;
         }
       }
       button {
-        background-color: rgb(23, 142, 176);
-        border: solid 1px rgb(23, 142, 176);
-        border-radius: 2px;
-        color: white;
+        margin: 10px 2.5% 10px auto;
+        padding: 8px 32px;
+        border-radius: 4px;
+        border: solid 1px rgb(11,11,11);
+        &:hover {
+          background-color: rgb(11,11,11);
+          color: white;
+          border-color: white;
+        }
+        &:focus {
+          outline: none
+        }
+      }
+    }
+    label.head {
+      display: flex;
+      max-width: 100%;
+      background-color: red;
+      color: white;
+      padding: 5px 2.5%;
+    }
+    #people {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 250px;
+      overflow-x: scroll;
+      .person {
+        border: solid $battlship 1px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 2.5%;
+        p {
+          margin: 0;
+        }
+        &.under-age {
+          background-color: lighten(blue, 30%);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .container {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      .sort {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
     }
   }
 }
+
+
+// html, body {
+//   min-height: 100vh;
+//   width: 100vw;
+//   .header {
+//     display: flex;
+//     flex-wrap: no-wrap;
+//     align-items: center;
+//     border-bottom: solid black 2px;
+//     padding: 0 5%;
+//     h3 {
+//       width: 40%;
+//       display: flex;
+//       justify-content: center;
+//     }
+//     a {
+//       width: 20%;
+//       text-align: center;
+//       i.fa-github {
+//         font-size: 2.3em;
+//         color: rgb(200, 25, 100);
+//       }
+//     }
+//   }
+//   .container {
+//     width: 80%;
+//     margin: 50px auto;
+//     border: solid black 2px;
+//     display: flex;
+//     max-width: 860px;
+//     .people-sort {
+//       border-right: solid black 2px;
+//       width: 100%;
+//       max-width: 600px;
+//       height: 250px;
+//       .head {
+//         background-color: rgb(23, 142, 176);
+//         height: 40px;
+//         display: flex;
+//         align-items: center;
+//         color: white;
+//         padding: 0 2.5%;
+//         margin: 0;
+//       }
+//       #people {
+//         margin: 0px 0 10px 0;
+//         padding: 0;
+//         width: 100%;
+//         max-height: 210px;
+//         overflow: scroll;
+//         .person {
+//           display: flex;
+//           justify-content: space-between;
+//           border-bottom: solid black 1px;
+//           &.under-age {
+//             background-color: yellow;
+//           }
+//           &:first-child {
+//             border-top: solid black 1px;
+//           }
+//           p {
+//             min-width: 40%;
+//             margin: 5px 0;
+//           }
+//           p:first-child {
+//             padding-left: 2.5%;
+//           }
+//           p:last-child {
+//             padding-right: 2.5%;
+//             text-align: right;
+//           }
+//         }
+//       }
+//     }
+//     .sort {
+//       display: flex;
+//       flex-direction: column;
+//       flex-wrap: wrap;
+//       width: 35%;
+//       max-width: 260px;
+//       padding: 10px 2.5%;
+//       .control {
+//         width: 100%;
+//         display: flex;
+//         flex-wrap: wrap;
+//         label.dir, label.cat {
+//           margin: 0 2.5% 0 0;
+//           width: 120px;
+//           font-weight: 600;
+//           color: black;
+//         }
+//         label.radio {
+//           display: flex;
+//           flex-wrap: wrap;
+//           input {
+//             margin: 0 0 0 5px;
+//             width: 22px;
+//             border: solid green 1px;
+//           }
+//         }
+//       }
+//       button {
+//         background-color: rgb(23, 142, 176);
+//         border: solid 1px rgb(23, 142, 176);
+//         border-radius: 2px;
+//         color: white;
+//       }
+//     }
+//   }
+// }
